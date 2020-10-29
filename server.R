@@ -2,11 +2,6 @@ library(shiny)
 library(r4ss)
 library(ggplot2)
 shinyServer(function(input, output) {
-    url <- a("tkravichandran", href="https://github.com/tkravichandran")
-
-    output$mySite <- renderUI({
-        tagList( "Made by", url)
-    })
 
     calc <- reactive({
         n <- as.numeric(input$n)
@@ -65,11 +60,11 @@ shinyServer(function(input, output) {
     output$plot2 <- renderUI({
         tags$div(
                  tags$ul(
-                          tags$li("X axis denotes the Sample Mean"),
-                          tags$li("Y axis denotes the Sample #"),
-                          tags$li("Red Line is the Population Mean"),
-                          tags$li("Green Confidence Bands contain the Population Mean"),
-                          tags$li("Red Confidence Bands DO NOT contain the Population Mean")
+                          tags$li("X axis denotes the Sample Mean."),
+                          tags$li("Y axis denotes the Sample #."),
+                          tags$li("Red Line is the Population Mean."),
+                          tags$li("Green Confidence Bands contain the Population Mean."),
+                          tags$li("Red Confidence Bands DO NOT contain the Population Mean.")
                       )
              )
     })
@@ -92,14 +87,45 @@ v/confidence-interval-simulation")
                       )
              )
     })
+
+    url3 <- a("repository",
+              href="https://github.com/tkravichandran/ci-simulation")
+
+    ## output$code <- renderUI({
+    ##     tagList("The scripts and calculations can be found in this", url3)
+    ## })
+
+    output$code <- renderUI({
+        tags$div(
+                 tags$ul(
+                          tags$li(tagList("The scripts and calculations can be found in this", url3,"."))
+                          
+                      )
+             )
+    })
+
+
+#### Github Plug
     
+    url <- a("tkravichandran", href="https://github.com/tkravichandran")
+    
+    output$mySite <- renderUI({
+        
+        tagList("Made by", url)
+    })
+
+
+    ## output$Site <- renderUI({
+    ##     tags$div(img(src = "gitmark.png", align="left"))
+    ##     })
+        
 ##     output$insp <- renderText("https://www.khanacademy.org/math/ap-
 ## statistics/estimating-confidence-ap/introduction-confidence-intervals/
 ## v/confidence-interval-simulation")
 
-    output$code <-
-        renderText("The Code and calculations are shown in presentation of this assignment.")
+    ## output$code <-
+    ##     renderText("The Code and calculations are shown in presentation of this assignment.")
 
     
 
-})
+    })

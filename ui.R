@@ -1,15 +1,45 @@
 library(shiny)
 shinyUI(fluidPage(
-    titlePanel("Confidence Interval of Sample Mean, a Simulation"),
+    ## titlePanel(
+    ##     windowTitle = "NOAA",
+    ##     title = tags$head(tags$link(rel="shortcut icon", 
+    ##                                 href="favicon.ico"))),
+    titlePanel(title="Confidence Interval of Sample Mean, a Simulation"),
+    ## tags$head(tags$link(rel="icon", type="image/gif/png",
+    ##                     href="favicon.ico")),
+    ## tags$head(HTML("<title>Baller Lab</title> <link rel='icon' href='favicon.ico'>")),
+    ##                                     #WIth company logo
+
+    ## tags$head(HTML("<link rel="icon" href="favicon.ico"
+    ##           type="image/x-icon">")),
+    
+    ## tags$head(HTML<link rel="shortcut icon" href="favicon.ico"
+    ##           type="image/x-icon">),
+    ## titlePanel(
+    ##     windowTitle = "NOAA",
+    ##     title = tags$head(tags$link(rel="shortcut icon", 
+    ##                                 href="https://www.noaa.gov/sites/all/themes/custom/noaa/favicon.ico", 
+    ##                                 type="image/vnd.microsoft.icon"))),
+    ## titlePanel(
+    ##     windowTitle = "NOAA",
+    ##     title = tags$head(tags$link(rel="shortcut icon", 
+    ##                                 href="https://www.twitter.com/favicon.ico"))),
+
+        titlePanel(
+        windowTitle = "NOAA",
+        title = tags$head(tags$link(rel="shortcut icon", 
+                                    href="https://drive.google.com/file/d/1ovniqPI_LBQf6e16wOfHORQ-DhQQEmR1/view?usp=sharing",
+        type="image/x-icon"))),
+    
     sidebarLayout(
         sidebarPanel(
-            wellPanel(helpText("This app simulates, what confidence interval expresses.",
+            wellPanel(helpText("This app simulates Confidence Intervals.",
                                "E.g., 95% Confidence Interval of a Sample Mean contains Population Mean (p), 95% of the time.")),
             h3("Move the Sliders to see the plot change"),
             wellPanel(sliderInput("n","Sample size(n)",20,100,20),
-            sliderInput("p","Population Mean (p)",0,1,0.3),
-            sliderInput("CI","Confindence Interval (CI%)",0,100,95),
-            sliderInput("N","Number of samples (N)",0,150,30)),
+                      sliderInput("p","Population Mean (p)",0,1,0.3),
+                      sliderInput("CI","Confindence Interval (CI%)",0,100,95),
+                      sliderInput("N","Number of samples (N)",0,150,30)),
                                         #actionButton("reset","Click
                                         #to resample")
             uiOutput("mySite")
@@ -26,11 +56,10 @@ shinyUI(fluidPage(
             ## textOutput("docu"),
             ## h4("Expected output"),
             ## textOutput("docu2"),
-            h3("Inspiration"),
-            uiOutput("insp"),
             h3("Code and calulations of Server and UI"),
-            textOutput("code")
-
+            uiOutput("code"),
+            h3("Inspiration"),
+            uiOutput("insp")
             
         )
     )
