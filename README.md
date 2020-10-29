@@ -1,3 +1,5 @@
-## TBD
+## Confidence Interval Simulation
 
-[Link to a brief explanation](https://agent18.github.io/c9-w4-coursera/presentatie.html)
+[![Shiny](https://www.shinyapps.io/favicon.ico)](https://agent18.shinyapps.io/cisim/)
+
+
