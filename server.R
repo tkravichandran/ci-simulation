@@ -115,17 +115,5 @@ v/confidence-interval-simulation")
     })
 
 
-    ## output$Site <- renderUI({
-    ##     tags$div(img(src = "gitmark.png", align="left"))
-    ##     })
-        
-##     output$insp <- renderText("https://www.khanacademy.org/math/ap-
-## statistics/estimating-confidence-ap/introduction-confidence-intervals/
-## v/confidence-interval-simulation")
-
-    ## output$code <-
-    ##     renderText("The Code and calculations are shown in presentation of this assignment.")
-
-    
 
     })

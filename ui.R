@@ -1,29 +1,7 @@
 library(shiny)
 shinyUI(fluidPage(
-    ## titlePanel(
-    ##     windowTitle = "NOAA",
-    ##     title = tags$head(tags$link(rel="shortcut icon", 
-    ##                                 href="favicon.ico"))),
-    titlePanel(title="Confidence Interval of Sample Mean, a Simulation"),
-    ## tags$head(tags$link(rel="icon", type="image/gif/png",
-    ##                     href="favicon.ico")),
-    ## tags$head(HTML("<title>Baller Lab</title> <link rel='icon' href='favicon.ico'>")),
-    ##                                     #WIth company logo
 
-    ## tags$head(HTML("<link rel="icon" href="favicon.ico"
-    ##           type="image/x-icon">")),
-    
-    ## tags$head(HTML<link rel="shortcut icon" href="favicon.ico"
-    ##           type="image/x-icon">),
-    ## titlePanel(
-    ##     windowTitle = "NOAA",
-    ##     title = tags$head(tags$link(rel="shortcut icon", 
-    ##                                 href="https://www.noaa.gov/sites/all/themes/custom/noaa/favicon.ico", 
-    ##                                 type="image/vnd.microsoft.icon"))),
-    ## titlePanel(
-    ##     windowTitle = "NOAA",
-    ##     title = tags$head(tags$link(rel="shortcut icon", 
-    ##                                 href="https://www.twitter.com/favicon.ico"))),
+    titlePanel(title="Confidence Interval of Sample Mean, a Simulation"),
 
         titlePanel(
         windowTitle = "NOAA",
@@ -52,10 +30,6 @@ shinyUI(fluidPage(
             plotOutput("plot1"),
             h3("Plot Explanation"),
             uiOutput("plot2"),
-            ## h3("Instructions and documentation"),
-            ## textOutput("docu"),
-            ## h4("Expected output"),
-            ## textOutput("docu2"),
             h3("Code and calulations of Server and UI"),
             uiOutput("code"),
             h3("Inspiration"),
